@@ -37,16 +37,16 @@ public class Test {
 		TWDictionary.buildArr();
 		TWDictionary.writeToFile();
 		TWDictionary.getSize();															// DICTIONARY
-		System.out.println("Dictionary built!");
+		System.out.println("Dictionary is built!");
 
 		TWMatrix.buildMatrix();															// MATRIX
-		System.out.println("Matrix built!");
+		System.out.println("Matrix is built!");
 
-		System.out.println("Try to search some pair of words.");
+		System.out.println("Try to search some pair of words: ");
 		String toSearch =  scan.nextLine();
 		TWDictionary.searchWord(toSearch.toLowerCase());
 
-		System.out.println("Try to get index of pair of words.");
+		System.out.println("Try to get index of pair of words: ");
 		String toSearch1 =  scan.nextLine();
 		System.out.println(TWIndex.getIndex(toSearch1.toLowerCase()));
 

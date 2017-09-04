@@ -37,17 +37,17 @@ public class Test {
 		Dictionary.buildArr();
 		Dictionary.writeToFile();
 		Dictionary.getSize();
-		System.out.println("Dictionary built!");
+		System.out.println("Dictionary is built!");
 
 		Matrix.buildMatrix();
-		System.out.println("Matrix built!");
+		System.out.println("Matrix is built!");
 
-		System.out.println("Try to search some word.");
+		System.out.println("Try to search some word: ");
 		System.out.print("\nSearch word: ");
 		String toSearch =  scan.nextLine();
 		Dictionary.searchWord(toSearch.toLowerCase());
 
-		System.out.println("Try to get index of some word.");
+		System.out.println("Try to get index of some word: ");
 		System.out.print("\nGet Index of word: ");
 		String toSearch1 =  scan.nextLine();
 		System.out.println(Index.getIndex(toSearch1.toLowerCase()));
