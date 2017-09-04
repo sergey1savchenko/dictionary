@@ -1,3 +1,3 @@
-# word_dictionary
+# dictionary
 
-simple txt parser on Java
+building words dictionary and matrix of occurrences
