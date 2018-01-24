@@ -1,3 +1,2 @@
-# dictionary
+# Information Retrieval labs
 
-building words dictionary and matrix of occurrences
