@@ -1,4 +1,4 @@
-package dictionary_matrix;
+package dictionary;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -7,28 +7,23 @@ import java.io.IOException;
 
 public class Indexation {
 
-	static String s;																	
-
 	public static void scanFile(File file) throws IOException {
 
 		BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-		String symbol = bufferedReader.readLine();
+		String line = bufferedReader.readLine();
 
-		while (symbol != null) {  														
+		while (line != null) {  														
 
-			String[] words = new String[symbol.split(" ").length];
-			words = symbol.split(" ");
+			String[] words = line.split(" ");
 
-			for(int i=0; i<words.length; i++){
-				words[i] = cleanMe(words[i]);
-			}
 			for(String word : words){
 				if(word!=null){
-					Dictionary.insertWord(word, file.getName());
+					Dictionary.insertWord(cleanMe(word).toLowerCase());
+					Dictionary.totalNumberOfWords += 1;
 				}																
 			}
 
-			symbol = bufferedReader.readLine(); 											
+			line = bufferedReader.readLine(); 											
 		}
 
 		System.out.println("Indexation of file "+file.getName()+" completed!");
@@ -37,7 +32,7 @@ public class Indexation {
 	}
 
 	private static String cleanMe(String s){
-		return s.replaceAll("[^a-zA-Z]", "");
+		return s.replaceAll("[^a-zA-Z0-9]", "");
 	}
 
 }
