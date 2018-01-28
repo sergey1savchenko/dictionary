@@ -12,7 +12,7 @@ import java.util.TreeSet;
 public class Dictionary {
 
 	public static int totalNumberOfWords = 0;
-	public static TreeSet<String> dictionary = new TreeSet<String>(); 
+	private static TreeSet<String> dictionary = new TreeSet<String>(); 
 
 	public static void insertWord(String word){
 		dictionary.add(word);

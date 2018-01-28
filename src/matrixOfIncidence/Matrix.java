@@ -15,7 +15,7 @@ import java.util.TreeSet;
 public class Matrix {
 	
 	public static int totalNumberOfWords = 0;
-	public static HashMap<String, int[]> matrix = new HashMap<String, int[]>(); 
+	private static HashMap<String, int[]> matrix = new HashMap<String, int[]>(); 
 	
 	public static void insertWord(String word, int documentId){
 		if (matrix.containsKey(word)){
